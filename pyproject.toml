@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "gatorgrader"
+version = "1.0.5"
+description = ""
+authors = [""]
+
+[tool.poetry.dependencies]
+gitpython = "*"
+requests = ">=2.20.0"
+commonmark = "*"
+num2words = "*"
+pluginbase = "*"
+
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+black = {version = "*", python = ">=3.6"}
+pytest = "*"
+six = "*"
+codecov = "*"
+flake8 = "*"
+pytest-cov = "*"
+pytest-sugar = "*"
+neovim = "*"
+bandit = "*"
+codacy-coverage = "*"
+pydocstyle = "*"
+radon = "*"
+xenon = "*"
+snoop = "*"
+
+
+[tool.poetry.scripts]
+test = "./scripts/test.sh"
+cover = "./scripts/cover.sh"
+lint = "./scripts/lint.sh"
+test-win = 'scripts\\test.bat'
+cover-win = 'scripts\\cover.bat'
+lint-win = 'scripts\\lint.bat'
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
